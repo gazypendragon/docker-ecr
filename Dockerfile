@@ -93,7 +93,7 @@ RUN sed -i '/<Directory "\/var\/www\/html">/,/<\/Directory>/ s/AllowOverride Non
 RUN chmod -R 777 /var/www/html
 
 # Give full access to the storage directory
-RUN chmod -R 777 storage/
+#RUN chmod -R 777 storage/
 
 # Use the sed command to search the .env file for a line that starts with APP_ENV= and replace everything after the = character
 RUN sed -i '/^APP_ENV=/ s/=.*$/=production/' .env
