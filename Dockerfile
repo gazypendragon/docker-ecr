@@ -95,29 +95,29 @@ RUN chmod -R 777 /var/www/html
 # Give full access to the storage directory
 #RUN chmod -R 777 storage/
 
-# Use the sed command to search the .env file for a line that starts with APP_ENV= and replace everything after the = character
-RUN sed -i '/^APP_ENV=/ s/=.*$/=production/' .env
+# # Use the sed command to search the .env file for a line that starts with APP_ENV= and replace everything after the = character
+# RUN sed -i '/^APP_ENV=/ s/=.*$/=production/' .env
 
-# Use the sed command to search the .env file for a line that starts with APP_URL= and replace everything after the = character
-RUN sed -i "/^APP_URL=/ s/=.*$/=https:\/\/${DOMAIN_NAME}\//" .env
+# # Use the sed command to search the .env file for a line that starts with APP_URL= and replace everything after the = character
+# RUN sed -i "/^APP_URL=/ s/=.*$/=https:\/\/${DOMAIN_NAME}\//" .env
 
-# Use the sed command to search the .env file for a line that starts with DB_HOST= and replace everything after the = character
-RUN sed -i "/^DB_HOST=/ s/=.*$/=${RDS_ENDPOINT}/" .env
+# # Use the sed command to search the .env file for a line that starts with DB_HOST= and replace everything after the = character
+# RUN sed -i "/^DB_HOST=/ s/=.*$/=${RDS_ENDPOINT}/" .env
 
-# Use the sed command to search the .env file for a line that starts with DB_DATABASE= and replace everything after the = character
-RUN sed -i "/^DB_DATABASE=/ s/=.*$/=${RDS_DB_NAME}/" .env
+# # Use the sed command to search the .env file for a line that starts with DB_DATABASE= and replace everything after the = character
+# RUN sed -i "/^DB_DATABASE=/ s/=.*$/=${RDS_DB_NAME}/" .env
 
-# Use the sed command to search the .env file for a line that starts with DB_USERNAME= and replace everything after the = character
-RUN  sed -i "/^DB_USERNAME=/ s/=.*$/=${RDS_DB_USERNAME}/" .env
+# # Use the sed command to search the .env file for a line that starts with DB_USERNAME= and replace everything after the = character
+# RUN  sed -i "/^DB_USERNAME=/ s/=.*$/=${RDS_DB_USERNAME}/" .env
 
-# Use the sed command to search the .env file for a line that starts with DB_PASSWORD= and replace everything after the = character
-RUN  sed -i "/^DB_PASSWORD=/ s/=.*$/=${RDS_DB_PASSWORD}/" .env
+# # Use the sed command to search the .env file for a line that starts with DB_PASSWORD= and replace everything after the = character
+# RUN  sed -i "/^DB_PASSWORD=/ s/=.*$/=${RDS_DB_PASSWORD}/" .env
 
-# Print the .env file to review values
-RUN cat .env
+# # Print the .env file to review values
+# RUN cat .env
 
-# Copy the file, AppServiceProvider.php from the host file system into the container at the path app/Providers/AppServiceProvider.php
-COPY AppServiceProvider.php app/Providers/AppServiceProvider.php
+# # Copy the file, AppServiceProvider.php from the host file system into the container at the path app/Providers/AppServiceProvider.php
+# COPY AppServiceProvider.php app/Providers/AppServiceProvider.php
 
 # Expose the default Apache and MySQL ports
 EXPOSE 80 3306
