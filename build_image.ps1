@@ -2,7 +2,7 @@ docker build \
 --build-arg PERSONAL_ACCESS_TOKEN='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' \
 --build-arg GITHUB_USERNAME='gazypendragon' \
 --build-arg REPOSITORY_NAME='docker-ecr' \
---build-arg WEB_FILE_ZIP='rentzone.zip' \
+#--build-arg WEB_FILE_ZIP='rentzone.zip' \
 --build-arg WEB_FILE_UNZIP='rentzone' \
 --build-arg DOMAIN_NAME='www.ndefrusonsllc.com' \
 --build-arg RDS_ENDPOINT='docker-ecr-db.ctgdsdmazrtg.us-east-1.rds.amazonaws.com' \
