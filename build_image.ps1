@@ -1,6 +1,6 @@
 # Run the docker build command
 docker build `
---build-arg PERSONAL_ACCESS_TOKEN= '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' `
+--build-arg PERSONAL_ACCESS_TOKEN= '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' `
 --build-arg GITHUB_USERNAME= 'gazypendragon' `
 --build-arg REPOSITORY_NAME= 'docker-ecr' `
 --build-arg WEB_FILE_ZIP= 'rentzone.zip' `
